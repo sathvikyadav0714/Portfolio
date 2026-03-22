@@ -1,184 +1,269 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Sathvik Yadav — Python Developer Portfolio</title>
-  <style>
-    :root{
-      --bg:#ffffff;--text:#0b1821;--muted:#5b6b73;--card:#f7fbfb;
-      --accent:#2a9d8f;--accent-dark:#1f7a6b;--radius:12px;
-      --glass:rgba(42,157,143,0.06);--max-width:1100px;
-    }
-    *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;margin:0;color:var(--text);background:var(--bg)}
-    a{color:var(--accent);text-decoration:none}
-    .wrapper{max-width:var(--max-width);margin:40px auto;padding:28px}
-    .muted{color:var(--muted)}
-    header{display:flex;gap:28px;align-items:center;justify-content:space-between}
-    .hero{display:flex;gap:20px;align-items:center}
-    .avatar{width:110px;height:110px;border-radius:20px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:28px}
-    h1{font-size:28px;margin:0}
-    .tag{color:var(--muted);margin-top:6px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap}
-    .btn,.btn-outline{padding:10px 14px;border-radius:10px;background:var(--accent);color:#fff;font-weight:600;font-size:14px;border:1px solid var(--accent)}
-    .grid{display:grid;grid-template-columns:1fr 340px;gap:30px;margin-top:28px}
-    .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 6px 18px rgba(20,30,40,0.04)}
-    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
-    .skill{background:var(--glass);padding:8px 10px;border-radius:8px;font-weight:600;color:var(--accent-dark);font-size:13px}
-    .projects{display:flex;flex-direction:column;gap:16px}
-    .project{padding:14px;border-radius:12px;background:#fff;border:1px solid rgba(10,30,40,0.05)}
-    .tech{font-size:13px;color:var(--muted)}
-    .pill{background:rgba(15,60,50,0.04);padding:6px 8px;border-radius:8px;font-size:13px;color:var(--muted)}
-    footer{text-align:center;color:var(--muted);margin-top:36px;font-size:14px}
-    @media (max-width:900px){.grid{grid-template-columns:1fr}header{flex-direction:column;align-items:flex-start}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Sathvik Yadav | Software Developer</title>
+
+<style>
+:root{
+  --bg:#0f172a;
+  --card:#111827;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --accent:#22c55e;
+  --accent2:#38bdf8;
+}
+body{
+  margin:0;
+  font-family:Inter,system-ui;
+  background:var(--bg);
+  color:var(--text);
+}
+.wrapper{
+  max-width:1100px;
+  margin:auto;
+  padding:30px;
+}
+h1,h2,h3{margin:0}
+a{text-decoration:none}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.avatar{
+  width:80px;height:80px;
+  border-radius:12px;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  display:flex;align-items:center;justify-content:center;
+  font-weight:bold;font-size:22px;
+}
+.hero{
+  display:flex;gap:15px;align-items:center;
+}
+.tag{color:var(--muted);font-size:14px}
+
+.actions a{
+  background:var(--accent);
+  color:#000;
+  padding:8px 12px;
+  border-radius:6px;
+  margin-left:8px;
+  font-weight:600;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 300px;
+  gap:25px;
+  margin-top:30px;
+}
+
+.card{
+  background:var(--card);
+  padding:18px;
+  border-radius:10px;
+}
+
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.skill{
+  background:#1f2937;
+  padding:6px 10px;
+  border-radius:6px;
+  font-size:12px;
+}
+
+.project{
+  margin-top:14px;
+  padding:14px;
+  border-radius:10px;
+  background:#020617;
+  border:1px solid #1f2937;
+}
+.tech{color:var(--muted);font-size:12px;margin-bottom:6px}
+
+.btns a{
+  display:inline-block;
+  margin-top:6px;
+  margin-right:8px;
+  padding:6px 10px;
+  border-radius:6px;
+  background:var(--accent2);
+  color:#000;
+  font-size:12px;
+}
+
+footer{
+  text-align:center;
+  margin-top:30px;
+  color:var(--muted);
+}
+
+@media(max-width:900px){
+  .grid{grid-template-columns:1fr}
+}
+</style>
 </head>
+
 <body>
 <div class="wrapper">
 
 <header>
-  <div class="hero">
-    <div class="avatar">SY</div>
-    <div>
-      <h1>Sathvik Yadav</h1>
-      <div class="tag">Python Developer | Automation & Web Applications</div>
-      <div style="margin-top:6px;color:var(--muted);font-size:14px">
-        📧 <a href="mailto:sathvik0714@gmail.com">sathvik0714@gmail.com</a>
-      </div>
-    </div>
-  </div>
-  <div class="actions">
-    <a class="btn" href="#contact">Contact</a>
-    <a class="btn-outline" href="#projects">Projects</a>
-    <a class="btn-outline" href="https://sathvikyadav0714.github.io/Portfolio/resume_v2.pdf" download>Download Resume</a>
-  </div>
+<div class="hero">
+<div class="avatar">SY</div>
+<div>
+<h1>Sathvik Yadav</h1>
+<div class="tag">Software Developer (Python | Full Stack | Data)</div>
+<div class="tag">📧 sathvikyadav0714@gmail.com</div>
+</div>
+</div>
+
+<div class="actions">
+<a href="resume.pdf" download>Resume</a>
+<a href="https://github.com/sathvikyadav0714" target="_blank">GitHub</a>
+<a href="https://www.linkedin.com/in/sathvikyadav/" target="_blank">LinkedIn</a>
+</div>
 </header>
 
 <div class="grid">
+
 <main>
 
 <section class="card">
 <h2>About</h2>
-<p class="muted">
-I’m a Data Science undergraduate and Python developer who builds automation tools and web-based applications. 
-I enjoy creating practical solutions such as management systems and custom utilities that solve real problems.
-</p>
-<p class="muted">
-My primary focus areas are Python development, backend systems, and automation scripting. I aim to build clean, reliable, and scalable projects.
+<p>
+Data Science undergraduate focused on building real-world applications using Python, SQL, and full-stack technologies. 
+Experienced in developing backend systems, automation tools, and data-driven solutions with practical use cases.
 </p>
 
-<h3>⚡ Skills</h3>
-
-<h4>Programming</h4>
+<h3 style="margin-top:12px">Skills</h3>
 <div class="skills">
-<div class="skill">Python</div>
-<div class="skill">Java</div>
-<div class="skill">C++</div>
-<div class="skill">JavaScript</div>
-<div class="skill">SQL</div>
-</div>
-
-<h4 style="margin-top:10px">Web & Frameworks</h4>
-<div class="skills">
-<div class="skill">HTML</div>
-<div class="skill">CSS</div>
-<div class="skill">React</div>
-<div class="skill">Django</div>
-<div class="skill">Flask / FastAPI</div>
-</div>
-
-<h4 style="margin-top:10px">Data & Tools</h4>
-<div class="skills">
-<div class="skill">Pandas</div>
-<div class="skill">NumPy</div>
-<div class="skill">Git & GitHub</div>
-<div class="skill">Jupyter</div>
-<div class="skill">VS Code</div>
+<span class="skill">Python</span>
+<span class="skill">SQL</span>
+<span class="skill">JavaScript</span>
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">Flask</span>
+<span class="skill">Django</span>
+<span class="skill">React</span>
+<span class="skill">Pandas</span>
+<span class="skill">NumPy</span>
+<span class="skill">Git</span>
 </div>
 </section>
 
-<section class="card" style="margin-top:18px">
-<h2>Experience</h2>
-<p class="muted"><strong>Student Developer — Personal & Academic Projects</strong> (2024 – Present)</p>
-<p class="muted">
-Designed and built Python automation tools and full-stack academic projects. 
-Worked across the full development cycle including planning, development, testing, and documentation.
-</p>
-</section>
-
-<section id="projects" class="card" style="margin-top:18px">
+<section class="card" id="projects">
 <h2>Projects</h2>
 
-<div class="projects">
-
 <div class="project">
-<h3>Smart File Organizer (Python Automation)</h3>
-<div class="tech">Python, OS, Shutil</div>
-<p>Automation tool that organizes messy folders into Images, Documents, Videos, Music and more. Includes preview mode and generates a summary report.</p>
-<span class="pill">Automation Tool</span>
+<h3>IntelliGrid Pro – AI Energy Analytics</h3>
+<div class="tech">Python, Streamlit, Pandas, XGBoost</div>
+<p>
+Built an energy analytics system to predict consumption patterns and detect anomalies in usage data. 
+Integrated machine learning models to identify inefficiencies and abnormal trends. 
+Developed an interactive dashboard for real-time monitoring, cost analysis, and decision support. 
+Enabled simulation-based insights for optimizing energy usage.
+</p>
+<div class="btns">
+<a href="https://sathvikyadav0714-intelligrid-pro-dashboardapp-yxo9ny.streamlit.app/" target="_blank">Live</a>
+<a href="https://github.com/sathvikyadav0714/intelligrid-pro" target="_blank">GitHub</a>
 </div>
-
-<div class="project">
-<h3>Campus-EventHub — Event Management System</h3>
-<div class="tech">Python, FastAPI/Flask, HTML, CSS, SQL</div>
-<p>Full-stack platform to create, manage, and register for campus events with user and admin features.</p>
-<span class="pill">Full-stack</span>
-</div>
-
-<div class="project">
-<h3>Careerly — AI Career Guidance Platform</h3>
-<div class="tech">Python, Flask, Machine Learning</div>
-<p>ML-based system that suggests career paths and learning roadmaps.</p>
-<span class="pill">AI + Backend</span>
 </div>
 
 <div class="project">
-<h3>Eventifyr — Events Platform (Frontend)</h3>
-<div class="tech">HTML, CSS, JavaScript</div>
-<p>Responsive event discovery site with filters and RSVP flow.</p>
-<span class="pill">Frontend</span>
+<h3>Campus EventHub – Full Stack System</h3>
+<div class="tech">Flask, SQLite, Bootstrap</div>
+<p>
+Developed a full-stack event management system with role-based access for students and administrators. 
+Implemented event registration, mock payments, and automated certificate generation. 
+Built an admin dashboard for managing events and tracking participation analytics. 
+Designed a scalable and user-friendly interface for real-world usage.
+</p>
+<div class="btns">
+<a href="https://campus-eventhub-production.up.railway.app/" target="_blank">Live</a>
+<a href="https://github.com/sathvikyadav0714/Campus-EventHub" target="_blank">GitHub</a>
+</div>
 </div>
 
+<div class="project">
+<h3>ATS Resume Analyzer</h3>
+<div class="tech">Python, NLP, Streamlit</div>
+<p>
+Built a resume analysis tool that evaluates resumes against job descriptions. 
+Implemented scoring logic and skill-gap detection to improve candidate matching. 
+Provides actionable suggestions to enhance resume quality and alignment with job roles.
+</p>
+<div class="btns">
+<a href="https://github.com/sathvikyadav0714/ATS-Resume-Tracking-System-using-LLM" target="_blank">GitHub</a>
 </div>
+</div>
+
 </section>
 
-<section class="card" style="margin-top:18px">
-<h2>Certifications & Workshops</h2>
-<ul class="muted">
-<li>HackerRank — Python (Basic) Certificate</li>
-<li>Python Programming – Infosys Springboard</li>
-<li>JP Morgan — Software Engineering Virtual Experience</li>
-<li>Deep Learning Essentials with TensorFlow & Keras – Workshop</li>
-<li>English Proficiency – Cambridge B2 Level</li>
+<section class="card">
+<h2>Other Projects</h2>
+
+<div class="project">
+<h3>Website Data Scraper</h3>
+<div class="tech">Python, BeautifulSoup, Pandas</div>
+<p>
+Built an automated data extraction tool with pagination support for collecting structured data from websites. 
+Exports data into CSV and Excel formats for analysis and business use cases.
+</p>
+<a class="btns" href="https://github.com/sathvikyadav0714/website-data-scraper" target="_blank">GitHub</a>
+</div>
+
+<div class="project">
+<h3>Smart File Organizer</h3>
+<div class="tech">Python</div>
+<p>
+Developed an automation tool to organize files into categorized folders. 
+Includes preview mode and summary reporting for efficient file management.
+</p>
+</div>
+
+</section>
+
+<section class="card">
+<h2>Certifications</h2>
+<ul>
+<li>EduSkills – Python Full Stack Internship</li>
+<li>Python Bootcamp (Udemy)</li>
+<li>JP Morgan – Software Engineering Virtual Experience</li>
+<li>Deep Learning Workshop (TensorFlow & Keras)</li>
 </ul>
 </section>
 
 </main>
 
 <aside>
-<div class="card" id="contact">
+
+<div class="card">
 <h3>Contact</h3>
-<p class="muted">Email:</p>
-<a href="mailto:sathvik0714@gmail.com">sathvik0714@gmail.com</a>
+<p><a href="mailto:sathvikyadav0714@gmail.com">Email</a></p>
 <p><a href="https://github.com/sathvikyadav0714" target="_blank">GitHub</a></p>
 <p><a href="https://www.linkedin.com/in/sathvikyadav/" target="_blank">LinkedIn</a></p>
 </div>
 
 <div class="card" style="margin-top:16px">
 <h4>Education</h4>
-<p class="muted"><strong>B.Tech in Data Science</strong><br>Malla Reddy University, Hyderabad (2023–2027)</p>
+<p>B.Tech Data Science<br>Malla Reddy University (2023–2027)</p>
 </div>
 
-<div class="card" style="margin-top:16px">
-<h4>Previous Education</h4>
-<p class="muted">Intermediate (MPC) — Sri Chaitanya Junior College<br>SSC — Bright Concept High School</p>
-</div>
 </aside>
+
 </div>
 
 <footer>
-portfolio • built by Sathvik
+© Sathvik Yadav
 </footer>
 
 </div>
